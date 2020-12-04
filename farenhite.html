@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#design{
+			text-align: center;
+			border:1px solid black;
+			margin-left: 32%;
+			margin-right: 32%;
+			margin-top: 12%;
+			border-radius: 30px;
+			background-color: #877d89;
+			height: 300px auto;
+			}
+		input[type=number]
+		{
+			font-size: 22px;
+			border-radius: 10px;
+			padding-bottom:10px ;
+			padding-top: 10px;
+			background-color: #fff;
+			border:white;
+			outline: none;
+			margin-top: 20px;
+		}
+		select{
+			font-size: 20px;
+			padding-right: 10px;
+			padding-left: 10px;
+			border:white;
+		}
+		button
+		{
+			font-size: 22px;
+			padding-left: 10%;
+			padding-right: 10%;
+			margin-right: 15px;
+			border-radius: 118px;
+			border:white;
+			outline: none;
+			margin-top: 25px;
+			height: 40px;
+		}
+		h3{
+			text-align: center;
+			font-size: 30px;
+			text-decoration: underline;
+		}
+		option{
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<form id="design">
+	<h3>Temprature converter</h3>	
+	<p>	<select id="scale" >
+			<option value="s" ><--select--></option>
+			 <option value="F" >farenhite</option>
+			 <option value="C" >celcius</option>
+		</select> </p>
+	<p>	<input type="number"  id="inp"  placeholder="enter the value" ></p>
+	<p><button type="button" onclick="cal()">convert</button><button type="button" onclick="clr()" >Reset</button></p>
+	<h2 id="out">	</h2>
+	
+	</form>
+</body>
+
+
+<script type="text/javascript">
+	var input ;
+	var output;
+	
+
+	function cal()
+	 {
+	 	debugger;
+	 	input =document.getElementById("inp").value;
+		var	 p=document.getElementById('scale').value;
+		console.log(p)
+
+		if (p=="F")
+		{
+			// output= ((input * 9)/5 + 32);
+		
+			// document.getElementById('out').value=output;
+			document.getElementById('out').innerHTML=((input-32)*(5/9)).toFixed(2)+"&deg;"+"C";
+		}
+
+		else if (p=="C")                                                                                                                                                
+		{
+			// output=(input-32)*(5/9);
+			// document.getElementById('out').value=output;
+			document.getElementById('out').innerHTML=((input*(9/5)+32)).toFixed(2)+"&deg;"+"F";
+		}
+		else
+			alert("please select the option")
+	}
+
+function clr()
+	{
+		document.getElementById("design").reset();
+	}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
